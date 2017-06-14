@@ -1,0 +1,17 @@
+{% extends "@BirkTwig/base.html.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+    <main>
+        <div id="header">
+            titre de la page
+        </div>
+
+            <div id="conteneur">
+                {% block content %}
+
+                {% endblock %}
+            </div>
+    </main>
+{% endblock %}
