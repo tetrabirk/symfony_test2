@@ -1,0 +1,15 @@
+{% extends "@BirkTwig/home.html.twig" %}
+
+{% block content %}
+    <h1>
+        All the lame Post
+    </h1>
+    {% for p in post %}
+        <div class="element">
+            <h3>{{ p.title }}</h3>
+            <p>{{ p.description }}</p>
+            <a href="{{ path('birk_my_post_postone')~'/'~p.id}}">++++++ en savoir plus ++++++</a>
+        </div>
+    {% endfor %}
+
+{% endblock %}

@@ -142,28 +142,4 @@ class Post
     {
         return $this->user;
     }
-
-    /**
-     * Set categorie
-     *
-     * @param \Birk\MyBundle\Entity\Categorie $categorie
-     *
-     * @return Post
-     */
-    public function setCategorie(\Birk\MyBundle\Entity\Categorie $categorie = null)
-    {
-        $this->categorie = $categorie;
-
-        return $this;
-    }
-
-    /**
-     * Get categorie
-     *
-     * @return \Birk\MyBundle\Entity\Categorie
-     */
-    public function getCategorie()
-    {
-        return $this->categorie;
-    }
 }

@@ -1,0 +1,16 @@
+{% extends "@BirkTwig/home.html.twig" %}
+
+{% block content %}
+    <h1>
+        All the cool Users
+    </h1>
+    {% for u in user %}
+        <div class="element">
+            <h3>{{ u.name }}</h3>
+            <img src="{{ u.photo }}">
+            <p>{{ u.bio }}</p>
+            <a href="{{ path('birk_my_user_userone')~'/'~u.id}}">++++++ en savoir plus ++++++</a>
+        </div>
+    {% endfor %}
+
+{% endblock %}

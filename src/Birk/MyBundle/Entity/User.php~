@@ -46,7 +46,7 @@ class User
 
     /**
      * @var ArrayCollection
-     * @ORM\OneToMany(targetEntity="Post", mappedBy="user", cascade={"persist"})
+     * @ORM\OneToMany(targetEntity="Post", mappedBy="user")
      */
     private $post;
 
@@ -132,45 +132,5 @@ class User
     {
         return $this->bio;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->post = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add post
-     *
-     * @param \Birk\MyBundle\Entity\Post $post
-     *
-     * @return User
-     */
-    public function addPost(\Birk\MyBundle\Entity\Post $post)
-    {
-        $this->post[] = $post;
-
-        return $this;
-    }
-
-    /**
-     * Remove post
-     *
-     * @param \Birk\MyBundle\Entity\Post $post
-     */
-    public function removePost(\Birk\MyBundle\Entity\Post $post)
-    {
-        $this->post->removeElement($post);
-    }
-
-    /**
-     * Get post
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getPost()
-    {
-        return $this->post;
-    }
 }
+

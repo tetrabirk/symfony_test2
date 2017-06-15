@@ -1,0 +1,19 @@
+{% extends "@BirkTwig/home.html.twig" %}
+
+{% block content %}
+
+        <div class="element solo">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.description }}</p>
+            <h3>User:</h3>
+            {% if post.user.name is defined %}
+                <a href="{{ path('birk_my_user_userone')~'/'~post.id }}">{{ post.user.name }}</a></li>
+            {% endif %}
+            <h3>Categorie:</h3>
+            {% if post.categorie.title is defined %}
+                <a href="{{ path('birk_my_categorie_categall')}}">{{ post.categorie.title }}</a></li>
+            {% endif %}
+
+        </div>
+
+{% endblock %}
